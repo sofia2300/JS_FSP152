@@ -14,3 +14,14 @@ console.log(nombre);
 
 console.log(`este es el apellido: ${apellido}`); /*Interpoblación: Colocar entre cadenas de texto unas variables. Esta forma es muy util con comillas invertidas*/
 console.log("nombre", nombre) /*Igual es una forma de nombrarlo, entre comas"*/
+
+let edad = 18;
+console.log("edad del usuario:", edad)
+
+if (edad >=18) {
+    let comida = comida
+    console.log("el usuario es mayor de edad");
+}
+
+// dos formas de hacer la condicion if: directamente o la asignacion a la variable aplicada anteriormente
+
