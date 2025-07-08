@@ -1,54 +1,63 @@
-// Dos tipos de variable
+// Ciclo FOR - el más común y versátil
 
-let number = 1 //let deja cambiar el valor
+// hay 3 tipos de ciclos: for: x cantidad de veces do...while: no se cuanta veces.
 
-const string = "cadena"
+// console.log("\nContando de 2 en 2")
+// for {let i=0; i <=10; i +=2} {
+//     console.log("par:", i);
+// }
 
-const boolean = 123 //number
-
-const array = [1, 2, true, "string", null] //Un array es una lista, un conjunto, puedo tener varios tipos de datos. Los corchetes son para arrays
-
-const nuevoValor = Lista [0]
-
-console.log(nuevoValor) //Es una forma de acceder a una variable.
-
-// console.log(array[0]);
-
-//clave=usualmente son los nombres
-//valor= lo que vale
-
-/*Los objetos son algo que abstraigo del mundo
-son caracteristicas de algo qu epongo en conjunto
-como en el siguiente ejemplo, los objetos nienen nombre
-y un valor*/
-
-const sofia = {
-    nombre: "sofia",
-    apellido: "Rubio",
-    edad: 21
+// For in con un objeto
+const persona = {
+    nombre: "Sofia",
+    edad: 21,
+    ciudad:"Cali",
+    profesion: "estudiante",
+    
 }
 
-const nombre = sofia.nombre //en este caso hago una nueva variable para imprimir un dato en especifico.
+for (let clave in persona) {
+    console.log(`${clave}: ${persona[clave]}`);
+}
 
-console.log(nombre)
+// For In = para arreglos:
+
+const colores = ["amarillo", "blanco", "verde"];
+
+for (let indice in colores) {
+    console.log(`${colores}, ${indice[colores]}`)
+}
+
+//For Of con array
+
+let frutas = ["manzana", "banana", "mango"];
+for (let fruta of frutas) {
+    console.log("fruta:", frutas)
+}
+// Para los arreglos se usa más el for of porque muestra el contenido, con el In muestra el indice. For On también se utiliza con cadenas de texto
 
 
-const carro = {
-    color: "blanco",
-    tiene_llantas: true,
-    gasolina: null,
-    matricula: undefine,
-    precioDelCarro: 100,
-    liquidos: ["aceite", "regrigerante", "frenos", "parabrisas"],
-    conductor: {
-        nombre: "carlos",
-        edad: 34,
-        licencia: "C3"
+// BREAK -Sale del ciclo
+
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        console.log("Encontre el 5, salgo del ciclo")
+        break;
     }
+    console.log("numero:", i);
 }
 
-console.log(carro.tiene_llantas)
+// CONTINUE - Salta a la siguiente interacción
+for (let i = 1; i <=5; i++) {
 
-console.log(carro.liquidos[2])
+}
 
-console.log(carro.conductor.nombre)
+
+// CICLOS ANIDADOS
+/* Ciclos dentro de otros,
+usualmente se ejecuta el interno y luego el externo */
+
+for (let i = 1; 1<=3; i++) {
+    console.log(``)
+}
+
